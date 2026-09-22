@@ -1,13 +1,3 @@
-import {
-  Button,
-  Card,
-  IconButton,
-  MobileNav,
-  Navbar,
-  Typography,
-} from "@material-tailwind/react";
-import { useEffect, useState } from "react";
-import { Routes, useLocation } from "react-router-dom";
 import SGWebNavbar from "../component/SGWebNavbar";
 import { APP_URL } from "../utils/constants";
 

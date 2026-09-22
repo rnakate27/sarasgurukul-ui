@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { event } from "react-ga";
 import { isEmailValid, isMobileValid } from "../utils";
 import {
   addContactedInfo,
@@ -24,11 +23,10 @@ const Contact = () => {
   const [phoneError, setPhoneError] = useState<string>();
   const branch = useAppSelector((state: any) => state.website.branch);
 
-  const { loading, error, contactus, newMessage } = useAppSelector(
+  const { loading, newMessage } = useAppSelector(
     (state: any) => state.contactus
   );
 
-  console.log("New Message", newMessage);
   const dispatch = useAppDispatch();
 
   const addContactUs = () => {
@@ -80,13 +78,11 @@ const Contact = () => {
 
   useEffect(() => {
     if (newMessage) {
-      console.log("New Messs Effff", newMessage);
       resetAllData();
       dispatch(resetNewContact());
-      // toast("Wow so easy !");
       notify();
     }
-  }, [newMessage]);
+  }, [newMessage, dispatch]);
 
   const notify = () => {
     toast(

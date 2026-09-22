@@ -1,11 +1,8 @@
 import {
   Avatar,
-  Popover,
   PopoverContent,
-  PopoverHandler,
   Typography,
 } from "@material-tailwind/react";
-import { Button } from "react-bootstrap";
 
 const SGTeamInfopopup = (props: any) => {
   return (

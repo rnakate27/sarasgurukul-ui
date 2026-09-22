@@ -85,13 +85,17 @@ li {
 
 .print-component {
   display: none;
-  @media print {
+}
+
+@media print {
+  .print-component {
     display: table;
-    .table-footer > tr > td{
-      text-align: center;
-      background-color: grey;
-      color: white;
-    }
+  }
+
+  .print-component .table-footer > tr > td {
+    text-align: center;
+    background-color: grey;
+    color: white;
   }
 }
 
@@ -101,11 +105,11 @@ li {
     display: block;
     page-break-before: always;
   }
-  @page { 
+
+  @page {
     @bottom-left {
-      content: counter(page) ' of ' counter(pages);
+      content: counter(page) " of " counter(pages);
     }
-   
   }
 }
 
