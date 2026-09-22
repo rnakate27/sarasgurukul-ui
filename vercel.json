@@ -1,0 +1,4 @@
+{
+  "buildCommand": "CI=false DISABLE_ESLINT_PLUGIN=true npx react-scripts build",
+  "outputDirectory": "build"
+}
